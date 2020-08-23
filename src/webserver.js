@@ -65,7 +65,7 @@ var port = nconf.get('port') || 80
       }
     })
 
-    server.listen(port, 'localhost', function () {
+    server.listen(port, '0.0.0.0', function () {
       winston.info('TruDesk is now listening on port: ' + port)
 
       if (_.isFunction(callback)) return callback()
@@ -130,7 +130,7 @@ var port = nconf.get('port') || 80
       }
 
       if (!server.listening) {
-        server.listen(port, 'localhost', function () {
+        server.listen(port, '0.0.0.0', function () {
           return callback()
         })
       } else {
