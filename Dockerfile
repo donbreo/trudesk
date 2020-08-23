@@ -25,6 +25,6 @@ RUN apk add --no-cache ca-certificates bash mongodb-tools fuse && rm -rf /tmp/*
 COPY --from=builder /usr/src/trudesk .
 COPY --from=gcsfuse /go/bin/gcsfuse /usr/local/bin
 
-EXPOSE 8118
+EXPOSE 80
 
 CMD [ "/bin/bash", "/usr/src/trudesk/startup.sh" ]

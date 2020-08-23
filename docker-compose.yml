@@ -4,7 +4,7 @@ services:
     image: polonel/trudesk:1
     restart: always
     ports:
-      - "8118:8118"
+      - "80:80"
     environment:
       NODE_ENV: production
       TRUDESK_DOCKER: "true"
